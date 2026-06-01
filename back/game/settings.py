@@ -12,11 +12,18 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_DOMAINS = [
-    'trickynoid.iskarion.ddns.net',
-    'api.trickynoid.iskarion.ddns.net',
+    'https://trickynoid.iskarion.ddns.net',
+    'https://api.trickynoid.iskarion.ddns.net',
 ]
 
 INSTALLED_APPS = [
+    # Required for KeyCloak
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.openid_connect',
+    # ---------------------------
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -24,6 +31,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True
+SOCIALACCOUNT_LOGIN_ON_GET = True
+SITE_ID = 2
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -33,6 +45,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'game.urls'
@@ -56,8 +69,12 @@ WSGI_APPLICATION = 'game.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': '5432',
     }
 }
 
@@ -75,3 +92,26 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = '/static/trickynoid/'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+
+SOCIALACCOUNT_PROVIDERS = {
+    "openid_connect": {
+        "APPS": [
+            {
+                "provider_id"   : "keycloak",                       # Identificador interno
+                "name"          : "Keycloak",                       # Nombre visible en botones
+                "client_id"     : "trickynoid",                     # Tu ID de cliente en Keycloak
+                "secret"        : os.environ.get('KC_SECRET'),
+                "settings"      : {
+                    "server_url": "https://auth.iskarion.ddns.net/realms/Iskarion/.well-known/openid-configuration",
+                },
+            }
+        ],
+        "AUTH_PARAMS": {
+            "prompt": "login"
+        }
+    },
+}

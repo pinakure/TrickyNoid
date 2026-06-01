@@ -1,0 +1,40 @@
+@import url('ff6.css');
+/*
+ff6
+ff6snes
+*/
+
+@import url('graph35.css');
+/*
+graph35+
+*/
+
+@import url('dreamcodex.css');
+/*
+dreamcodex-micro-clean
+dreamcodex-micro-mech
+dreamcodex-8bit-decimal
+dreamcodex-8bit-integer
+dreamcodex-8bit-signed
+dreamcodex-gamer
+*/
+
+@import url('lcdmicro.css');
+/*
+digital-italic
+digital-monoitalic
+digital-mono
+*/
+
+@import url('basic.css');
+/*
+basic
+basic-c64
+basic-tobi
+*/
+
+body *{
+	font-family: graph35+;
+	font-size: 8px;
+	line-height: 8px;
+}

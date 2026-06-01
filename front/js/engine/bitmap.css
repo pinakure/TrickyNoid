@@ -1,0 +1,12 @@
+.bitmap {
+	clear:			none;
+	display:		inline-block;
+	border:			1px solid #fff;
+	vertical-align:	middle;
+}
+#resources {
+	z-index: -1000;
+	top: 0;
+	left: 0;
+	position: fixed;
+}

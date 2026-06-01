@@ -1,0 +1,25 @@
+body canvas {
+	position: 		fixed;
+	top:			0;
+	left:			0;
+	image-rendering:		-moz-pixelated;
+	image-rendering:		-o-pixelated;
+	image-rendering:		-webkit-pixelated;
+	image-rendering:		pixelated;
+	image-rendering:		-moz-crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;
+}
+
+#layer-1 { z-index: 10; }
+#layer-2 { z-index: 20; }
+#layer-3 { z-index: 30; }
+#layer-4 { z-index: 40; }
+#layer-5 { z-index: 50; }
+
+canvas#layer-5 {
+	background-image:	url('../../data/gfx/hud/ehud.png') !important;
+	background-size:	100% 100% !important;
+	background-position:	top left;
+}
+	
+	

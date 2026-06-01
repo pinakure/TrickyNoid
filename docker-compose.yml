@@ -1,0 +1,42 @@
+networks:
+  proxy_sql-network:
+    external: true
+
+services:
+  trickynoid-front-service:
+    image: php:8.3-fpm
+    container_name: trickynoid
+    hostname: trickynoid
+    volumes:
+      - /src/trickynoid/front:/var/www/html
+      - /src/trickynoid/front/www.conf:/usr/local/php-fpm.d/www.conf
+      - /var/log:/var/log
+    networks:
+      - proxy_sql-network
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      KC_SECRET: ${KC_SECRET}
+    restart: unless-stopped
+
+  trickynoid-back-service:
+    build: /src/trickynoid/back/
+    container_name: trickynoid-backend
+    hostname: trickynoid-backend
+    networks:
+      - proxy_sql-network
+    volumes:
+      - /src/trickynoid/back:/src/trickynoid/
+      - /static/trickynoid:/static/trickynoid
+      - /media/trickynoid:/media/trickynoid
+      - /var/log:/var/log
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      KC_SECRET: ${KC_SECRET}
+      DJANGO_SECRET: ${DJANGO_SECRET}
+    restart: unless-stopped

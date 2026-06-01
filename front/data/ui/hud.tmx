@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="64" height="30" tilewidth="5" tileheight="8">
+ <tileset firstgid="1" name="fontdigi" tilewidth="5" tileheight="8" spacing="1" margin="1">
+  <image source="../gfx/font/fontdigi.png" trans="ff00ff" width="97" height="55"/>
+ </tileset>
+ <tileset firstgid="97" name="fontmono" tilewidth="5" tileheight="8" spacing="1" margin="1">
+  <image source="../gfx/font/fontmono.png" trans="ff00ff" width="97" height="55"/>
+ </tileset>
+ <tileset firstgid="193" name="ehud" tilewidth="320" tileheight="240">
+  <image source="../gfx/hud/ehud.png" trans="ff00ff" width="320" height="240"/>
+ </tileset>
+ <tileset firstgid="194" name="pad" tilewidth="20" tileheight="4">
+  <image source="../gfx/pad.png" trans="ff00ff" width="20" height="36"/>
+ </tileset>
+ <tileset firstgid="203" name="hud_hib" tilewidth="86" tileheight="41">
+  <tileoffset x="234" y="199"/>
+  <image source="../gfx/hud/hud_hib.png" trans="ff00ff" width="86" height="41"/>
+ </tileset>
+ <tileset firstgid="204" name="hud_hi" tilewidth="86" tileheight="41">
+  <tileoffset x="234" y="199"/>
+  <image source="../gfx/hud/hud_hi.png" trans="ff00ff" width="86" height="41"/>
+ </tileset>
+ <tileset firstgid="205" name="hud_hig" tilewidth="86" tileheight="41">
+  <tileoffset x="234" y="199"/>
+  <image source="../gfx/hud/hud_hig.png" trans="ff00ff" width="86" height="41"/>
+ </tileset>
+ <tileset firstgid="206" name="fontg" tilewidth="5" tileheight="8" spacing="1" margin="1">
+  <image source="../gfx/font/fontg.png" trans="ff00ff" width="97" height="55"/>
+ </tileset>
+ <layer name="HUD" width="64" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OAQkAAAwDoPVv9WaPMRiawAQAAAAAAABgw7UDZQ+BP3LoAB4AAA==
+  </data>
+ </layer>
+ <layer name="text" width="64" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2YywrCQAxFA+4F/QQfiOJC8LESFyKiolbwsdX//wrvZSIVQXHTVqf3wIEybSEhM4GMmfhnqnAKG3AC27AHB3AMh/6uBftw5v/EQgfOYQLP/lwmWOMN3MMlPBYbjhBCCCGEEEJkRtPCzMPZh7Pf1tc5C659newszEnJ01oMPPLnzL+wkP/pzbc1t55PaLkwsnTuX9nn2saYf9npWjjXrD3PO++2uCd4Fg6W9gZSKSJAkSnsfxcL/Z2y1uwH3Aevd2Mktj1w+9JrvmEJIYT4ce6U2JhMAB4AAA==
+  </data>
+ </layer>
+ <layer name="low" width="64" height="30" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OMQ0AAAgDsPm3hilMLOGgVdAE+GquAwAAAAAAAFQtvWXtogAeAAA=
+  </data>
+ </layer>
+ <layer name="mid" width="64" height="30" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OMQ0AAAgDsPnXhihMLOGgVdAE+GquAwAAAAAAAFQtAE517gAeAAA=
+  </data>
+ </layer>
+ <layer name="high" width="64" height="30" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAPBvzwcm0AHgAA
+  </data>
+ </layer>
+</map>

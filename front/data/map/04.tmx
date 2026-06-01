@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="14" height="28" tilewidth="16" tileheight="8" nextobjectid="1">
+ <tileset firstgid="1" name="bricks" tilewidth="16" tileheight="8" tilecount="160">
+  <image source="../gfx/bricks.bmp" trans="ff00ff" width="256" height="80"/>
+ </tileset>
+ <layer name="bricks" width="14" height="28">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2S3Q2AMAiEmcFCXaADOLKjqhESQo7+vBovudAAX1uqBxG12we98hHlmosMWFZHhgPr41Pb1Jz0xL2MKerN5bN5bO/iekuoIYYcI2pjCbCeIe2vagk1HjAS1ohFjM2H2B4jYY1YxNQkJwNmV2dsdsfeeV4r80XNvGem3vcbCf0vs7Lzfn1XZ+JZZkUXAcimCSAGAAA=
+  </data>
+ </layer>
+ <layer name="damage" width="14" height="28" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBTQGoTSWD0yCCJTHzl2BlFg3ygY/AAAs/fgbyAGAAA=
+  </data>
+ </layer>
+ <layer name="tokens" width="14" height="28" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3SuQ0AIAzAwKzO/yNGxjUTAEpxpTsbEbFw8AiISMgoqGjoGJgw2l3brYN2b3WvfKbd/90GVr9b7iAGAAA=
+  </data>
+ </layer>
+ <layer name="shadow" width="14" height="28" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCjABAGPoZhkgBgAA
+  </data>
+ </layer>
+</map>

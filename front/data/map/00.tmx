@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="14" height="28" tilewidth="16" tileheight="8" nextobjectid="1">
+ <properties>
+  <property name="info" value="Some blocks can throw projectiles"/>
+ </properties>
+ <tileset firstgid="1" name="bricks" tilewidth="16" tileheight="8" tilecount="160">
+  <image source="../gfx/bricks.png" trans="ff00ff" width="256" height="80"/>
+ </tileset>
+ <layer name="bricks" width="14" height="28">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2TOw7CMBBE3VPxh/BRjkBNlSNwhNQEKRAo0gA5OmMxK60sC3lDQ8FITytNPPZuLBfOuaIH9ResyMGlqWUuI9bckpx7nmfNyXzWXMnMXSF7+HpRiF+zdmAHctYH/Sbwm0guV2s6+rfAj+Ws50nffu8n0fNdFan/zqIBsUju0pLbk1ju01w6F6pMyKXoCCpwUlT0w+/i+3sbghEYgwmYghmYg4V7v6+Mva/BBmwTe/rrd/UCVy1zhCAGAAA=
+  </data>
+ </layer>
+ <layer name="damage" width="14" height="28">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCjABAGPoZhkgBgAA
+  </data>
+ </layer>
+ <layer name="tokens" width="14" height="28" opacity="0.7">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgoD9og+JRfaOAnqAfikkBrVBMqj6YXnL1DTYwAYgbgbgZiFsYIG4EpfF2IO4A4k4g7gLibiDuAeJeIO4bEJeOAmoCAGcpTqEgBgAA
+  </data>
+ </layer>
+ <layer name="shadow" width="14" height="28">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCjABAGPoZhkgBgAA
+  </data>
+ </layer>
+</map>
